@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University of Layyah | University Blog</title>
+
+    <meta name="description"
+          content="Explore the University of Layyah, its faculties, academic environment, campus and educational opportunities.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f6;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+        header {
+            background: #073b32;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #a9e6c8;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a9e6c8;
+        }
+
+        /* HERO / BACKGROUND IMAGE */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(4, 35, 29, 0.48),
+                    rgba(4, 35, 29, 0.68)
+                ),
+                url("https://ul.edu.pk/storage/career/files/Faculty-bdf81.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.65);
+        }
+
+        .hero h1 span {
+            color: #b9f3d0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 680px;
+            margin: 0 auto 30px;
+            text-shadow: 0 2px 7px rgba(0,0,0,0.8);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0b765c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #09523f;
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background: white;
+            color: #073b32;
+        }
+
+        .btn-light:hover {
+            background: #dff6e9;
+            color: #073b32;
+        }
+
+        /* GENERAL SECTIONS */
+        .section {
+            padding: 70px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            color: #073b32;
+            font-size: clamp(26px, 4vw, 36px);
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #64736d;
+        }
+
+        .underline {
+            width: 65px;
+            height: 4px;
+            background: #0b765c;
+            margin: 12px auto;
+            border-radius: 5px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: #52615b;
+        }
+
+        /* STATISTICS */
+        .stats {
+            background: #073b32;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 7%;
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 30px;
+            color: #b9f3d0;
+        }
+
+        .stat p {
+            font-size: 14px;
+        }
+
+        /* BLOG ARTICLES */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e1f5e9;
+            color: #075b42;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            color: #073b32;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card p {
+            color: #63716b;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            color: #087657;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* QUICK LINKS */
+        .sidebar {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.07);
+        }
+
+        .sidebar h3 {
+            color: #073b32;
+            border-bottom: 2px solid #dcece3;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        .quick-links {
+            list-style: none;
+        }
+
+        .quick-links li {
+            border-bottom: 1px solid #edf0ee;
+        }
+
+        .quick-links a {
+            display: block;
+            color: #43554c;
+            padding: 12px 0;
+            transition: 0.2s;
+        }
+
+        .quick-links a:hover {
+            color: #087657;
+            padding-left: 5px;
+        }
+
+        .notice {
+            margin-top: 25px;
+            background: #edf8f1;
+            padding: 18px;
+            border-left: 4px solid #0b765c;
+            border-radius: 4px;
+        }
+
+        .notice h4 {
+            color: #075b42;
+            margin-bottom: 8px;
+        }
+
+        .notice p {
+            font-size: 14px;
+            color: #52615b;
+        }
+
+        /* FACULTIES */
+        .faculties {
+            background: #eaf3ee;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .faculty-box {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 4px solid #0b765c;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .faculty-box .symbol {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .faculty-box h3 {
+            color: #073b32;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .faculty-box p {
+            font-size: 14px;
+            color: #64736d;
+        }
+
+        /* VICE CHANCELLOR MESSAGE */
+        .message {
+            background: white;
+        }
+
+        .message-content {
+            max-width: 900px;
+            margin: auto;
+            background: #f4f8f5;
+            padding: 35px;
+            border-radius: 10px;
+            border-left: 5px solid #0b765c;
+        }
+
+        .message-content blockquote {
+            font-size: 17px;
+            color: #45584e;
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .message-content h3 {
+            color: #073b32;
+        }
+
+        .message-content .position {
+            color: #6b7c72;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #eaf3ee;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+        }
+
+        .contact-info h3,
+        .contact-form h3 {
+            color: #073b32;
+            margin-bottom: 18px;
+        }
+
+        .contact-info p {
+            margin-bottom: 14px;
+            color: #52615b;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd8d0;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid #0b765c;
+            border-color: transparent;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+            font: inherit;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #062c25;
+            color: #dbe9e0;
+            padding: 30px 7%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #b9f3d0;
+        }
+
+        .disclaimer {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #bdcec4;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 950px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px 16px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 55px 18px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .articles {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 50px 5%;
+            }
+
+            .stats {
+                padding: 30px 5%;
+            }
+
+            .message-content {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+        <a class="logo" href="#home" style="color:white;">
+            UNIVERSITY <span>OF LAYYAH</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#faculties">Faculties</a>
+            <a href="#message">VC Message</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label">LEARN • EXPLORE • GROW</div>
+
+            <h1>
+                Welcome to <span>University of Layyah</span> Blog
+            </h1>
+
+            <p>
+                Discover our academic journey, campus life,
+                educational opportunities and the spirit of
+                learning at the University of Layyah, Punjab, Pakistan.
+            </p>
+
+            <a class="btn" href="#blog">Explore Our Blog</a>
+            <a class="btn btn-light"
+               href="https://ul.edu.pk/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Official Website
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+        <div class="section-heading">
+            <h2>About Our University</h2>
+            <div class="underline"></div>
+            <p>Education, innovation and opportunities for the future</p>
+        </div>
+
+        <div class="about-content">
+            <p>
+                The University of Layyah is a public-sector university
+                located in Layyah, Punjab, Pakistan. Its journey began
+                as a sub-campus of Bahauddin Zakariya University in 2009.
+                It was upgraded to an independent university in 2022.
+            </p>
+
+            <p>
+                The university aims to support quality education,
+                innovative learning, research and the development of
+                students' knowledge and professional skills.
+            </p>
+
+            <a class="btn"
+               href="https://ul.edu.pk/page/vision"
+               target="_blank"
+               rel="noopener noreferrer">
+                Read Official Vision
+            </a>
+        </div>
+    </section>
+
+    <!-- UNIVERSITY STATISTICS -->
+    <section class="stats">
+        <div class="stat">
+            <h3>2022</h3>
+            <p>Independent University</p>
+        </div>
+
+        <div class="stat">
+            <h3>5</h3>
+            <p>Faculties*</p>
+        </div>
+
+        <div class="stat">
+            <h3>22</h3>
+            <p>Departments*</p>
+        </div>
+
+        <div class="stat">
+            <h3>Punjab</h3>
+            <p>Pakistan</p>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="section" id="blog">
+        <div class="section-heading">
+            <h2>Latest University Articles</h2>
+            <div class="underline"></div>
+            <p>Learn more about our campus and educational environment</p>
+        </div>
+
+        <div class="blog-layout">
+
+            <!-- TWO ARTICLES -->
+            <div class="articles">
+
+                <article class="card">
+                    <img
+                        src="https://parhlopakistan.com/wp-content/uploads/2025/06/University-of-Layyah.jpg"
+                        alt="University of Layyah main campus building"
+                        loading="lazy">
+
+                    <div class="card-content">
+                        <span class="tag">Campus Life</span>
+
+                        <h3>Discover the University of Layyah Campus</h3>
+
+                        <p>
+                            The University of Layyah provides an
+                            academic environment where students can
+                            learn, develop skills and prepare for
+                            future opportunities. The university
+                            serves students in southern Punjab.
+                        </p>
+
+                        <a class="read-more"
+                           href="https://ul.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explore Official Website →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img
+                        src="https://ul.edu.pk/storage/career/files/Faculty-bdf81.jpg"
+                        alt="Faculty of Computing and Engineering building"
+                        loading="lazy">
+
+                    <div class="card-content">
+                        <span class="tag">Computing & Engineering</span>
+
+                        <h3>Technology and Innovation at UL</h3>
+
+                        <p>
+                            Computing and engineering education helps
+                            students build technical knowledge,
+                            analytical thinking and practical skills.
+                            Explore the university's academic faculties
+                            and available study programs.
+                        </p>
+
+                        <a class="read-more"
+                           href="https://www.ul.edu.pk/faculty-detail/MTIwNA%3D%3D/faculty-of-computing-engineering"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explore Computing Faculty →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- QUICK LINKS SIDEBAR -->
+            <aside class="sidebar">
+                <h3>Quick Links</h3>
+
+                <ul class="quick-links">
+                    <li>
+                        <a href="https://ul.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Official University Website ↗
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.ul.edu.pk/admissions"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Admissions Portal ↗
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://ul.edu.pk/page/vision"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Vision and Mission ↗
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://ul.edu.pk/page/Announcement"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            University Announcements ↗
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://ul.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            News and Updates ↗
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faculties">Academic Faculties</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact Information</a>
+                    </li>
+                </ul>
+
+                <div class="notice">
+                    <h4>Admission Updates</h4>
+                    <p>
+                        For the latest admission dates, eligibility
+                        criteria and program details, please visit
+                        the official admissions portal.
+                    </p>
+
+                    <a class="read-more"
+                       href="https://www.ul.edu.pk/admissions"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Check Admissions →
+                    </a>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- FACULTIES SECTION -->
+    <section class="section faculties" id="faculties">
+        <div class="section-heading">
+            <h2>Our Academic Faculties</h2>
+            <div class="underline"></div>
+            <p>Explore different areas of education and learning</p>
+        </div>
+
+        <div class="faculty-grid">
+
+            <div class="faculty-box">
+                <div class="symbol">💻</div>
+                <h3>Computing & Engineering</h3>
+                <p>
+                    Computing, information technology and engineering
+                    education.
+                </p>
+            </div>
+
+            <div class="faculty-box">
+                <div class="symbol">🌱</div>
+                <h3>Agricultural Sciences & Technology</h3>
+                <p>
+                    Agriculture, plant sciences and related disciplines.
+                </p>
+            </div>
+
+            <div class="faculty-box">
+                <div class="symbol">🔬</div>
+                <h3>Natural Sciences</h3>
+                <p>
+                    Scientific learning, laboratory work and research.
+                </p>
+            </div>
+
+            <div class="faculty-box">
+                <div class="symbol">🐄</div>
+                <h3>Veterinary & Animal Sciences</h3>
+                <p>
+                    Animal health, veterinary education and sciences.
+                </p>
+            </div>
+
+            <div class="faculty-box">
+                <div class="symbol">📚</div>
+                <h3>Management, Humanities & Social Sciences</h3>
+                <p>
+                    Business, languages, humanities and social studies.
+                </p>
+            </div>
+
+            <div class="faculty-box">
+                <div class="symbol">🎓</div>
+                <h3>Student Development</h3>
+                <p>
+                    Learning, professional skills and future opportunities.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VICE CHANCELLOR MESSAGE -->
+    <section class="section message" id="message">
+        <div class="section-heading">
+            <h2>Vice Chancellor's Message</h2>
+            <div class="underline"></div>
+            <p>A vision for learning, research and growth</p>
+        </div>
+
+        <div class="message-content">
+            <blockquote>
+                "I welcome you to learn, explore and grow with the latest,
+                updated and sustainability-oriented knowledge and skills
+                to meet the competitive challenges of this modern era."
+            </blockquote>
+
+            <h3>Prof. Dr. Muhammad Zubair Abu Bakar</h3>
+            <p class="position">Vice Chancellor, University of Layyah</p>
+
+            <p style="margin-top: 15px;">
+                This excerpt is taken from the Vice Chancellor's message
+                published on the university's official website.
+            </p>
+
+            <a class="read-more"
+               href="https://ul.edu.pk/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Read the Official Message →
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+        <div class="section-heading">
+            <h2>Contact Us</h2>
+            <div class="underline"></div>
+            <p>Get in touch with the University of Layyah</p>
+        </div>
+
+        <div class="contact-layout">
+
+            <div class="contact-info">
+                <h3>University Information</h3>
+
+                <p>
+                    <strong>Address:</strong><br>
+                    Katchehry Road, Layyah, Punjab, Pakistan
+                </p>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:info@ul.edu.pk">
+                        info@ul.edu.pk
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    <a href="tel:+920606920247">
+                        +92 0606 920247
+                    </a>
+                </p>
+
+                <a class="btn"
+                   href="https://ul.edu.pk/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit Official Website
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+
+                <form action="mailto:info@ul.edu.pk"
+                      method="post"
+                      enctype="text/plain">
+
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Enter your name"
+                        required>
+
+                    <label for="email">Your Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="Enter your email"
+                        required>
+
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="Subject"
+                        placeholder="Enter subject"
+                        required>
+
+                    <label for="message-box">Your Message</label>
+                    <textarea
+                        id="message-box"
+                        name="Message"
+                        rows="5"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button class="btn" type="submit">
+                        Send Message
+                    </button>
+                </form>
+
+                <p style="font-size:12px; margin-top:10px; color:#64736d;">
+                    This simple form uses your email application.
+                    It does not store messages on a website server.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>University of Layyah Blog</strong></p>
+
+        <p>
+            Katchehry Road, Layyah, Punjab, Pakistan
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:info@ul.edu.pk">info@ul.edu.pk</a>
+        </p>
+
+        <p>
+            <a href="#home">Back to Top ↑</a>
+            &nbsp; | &nbsp;
+            <a href="https://ul.edu.pk/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Official Website
+            </a>
+        </p>
+
+        <p class="disclaimer">
+            This is an independent educational blog project,
+            not the official university website. University
+            information and images are linked to their respective
+            online sources. Please verify current details officially.
+        </p>
+
+        <p style="margin-top:15px;">
+            © 2026 University of Layyah Blog | Student Project
+        </p>
+    </footer>
+
+</body>
+</html>
